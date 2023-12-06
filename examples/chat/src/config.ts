@@ -6,6 +6,8 @@ export const Config: Configuration = {
   DEFAULT_ANIMATION: 'Neutral_Hello_Long_01',
   GENERATE_TOKEN_URL:
     process.env.REACT_APP_GENERATE_TOKEN_URL || 'http://localhost:4000',
+  THING:
+    process.env.REACT_APP_THING || 'WHUT?',
   IMAGES_BODY_URI:
     'https://storage.googleapis.com/assets-inworld-ai/models/innequin/v2/textures/body/', // ./assets/textures/body/
   IMAGES_FACIAL_URI:

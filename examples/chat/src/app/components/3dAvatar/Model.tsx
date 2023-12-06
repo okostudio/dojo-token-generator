@@ -23,6 +23,7 @@ const BLINK_THRESH = 1000;
 
 export function Model(props: ModelProps) {
   const modelData = useLoader(GLTFLoader, props.url).scene;
+  console.log("data", modelData)
   const modelRef = useRef(modelData);
   const [eyesClosedIndex, setEyesClosedIndex] = useState(-1);
   const [skinnedMesh, setSknnedMesh] = useState<SkinnedMesh | null>(null);

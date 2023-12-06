@@ -89,7 +89,7 @@ export const theme = responsiveFontSizes(
             border: 'none',
             borderBottom: `solid 1px ${INWORLD_COLORS.warmGray[20]}`,
             boxShadow: 'none',
-            backgroundColor: 'rgba(255,255,255,0.8)',
+            backgroundColor: 'rgba(255,255,255,0.95)',
             backdropFilter: 'blur(16px)',
           },
         },
