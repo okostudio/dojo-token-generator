@@ -2,6 +2,6 @@ coverage
 build
 node_modules
 .eslintcache
-.env
+# .env
 # Mac filesystem
 **/.DS_Store
