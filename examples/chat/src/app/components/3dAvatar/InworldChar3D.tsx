@@ -23,11 +23,13 @@ export default function InworldChar3D(props: InworldChar3DProps) {
           </Skeleton>
         }
       >
-        {/* <color attach="background" args={['#e0b7ff']} /> */}
+        
         <Canvas
           style={{ height: '100%', width: '100%' }}
-          camera={{ fov: 25, position: [0, 0.6, 1], rotation: [0, 0, 0] }}
+          camera={{ fov: 25, position: [0, 0, 3], rotation: [0, 0, 0] }}
         >
+          <color attach="background" args={['#000000']} />
+          
           {true && (
             <Suspense fallback={null}>
               <Model
@@ -35,13 +37,18 @@ export default function InworldChar3D(props: InworldChar3DProps) {
                 phonemes={props.phonemes}
                 emotionEvent={props.emotionEvent}
                 onLoad={() => {
+                  // console.log("model: ", props)
                   setIsLoaded(true);
                 }}
               />
             </Suspense>
           )}
-          <ambientLight intensity={0.5} />
-          <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
+          
+          <mesh position={[0,1,-2]} scale={[5, 5, 1]}>
+            <planeGeometry />
+          </mesh>
+          <ambientLight intensity={0.25} />
+          <spotLight position={[10, 10, 10]} angle={0.3} penumbra={0.25} />
         </Canvas>
       </Suspense>
     </>

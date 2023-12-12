@@ -21,6 +21,7 @@ import {
   AnimationFiles,
   AnimationSequence,
 } from './app/components/innequin/data/animations';
+console.log("lorem: ", AnimationFiles, AnimationSequence)
 import { Innequin } from './app/components/innequin/Innequin';
 import { Layout } from './app/components/Layout';
 import {
